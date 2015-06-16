@@ -1,0 +1,129 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+
+.carousel{
+	padding-bottom:30px;
+
+	.item{
+		a{
+			display:block;
+			position:relative;
+			img{
+				width:100%;
+			}
+			.glyphicon-play{
+				position:absolute;
+				bottom:0;
+				top:auto;
+				left:0;
+				display:block;
+				background-color:$color-end;
+				width:30px;
+				height:30px;
+				line-height:30px;
+				text-align:center;
+				color:$foot-white;
+			}
+			&:hover{
+				.glyphicon-play{
+					color:darken($bg-color, 35%);
+				}
+			}
+		}
+		p{
+			color:$text-color-greyish;
+			padding:10px 5px;
+			font-size:12px;
+		}
+	}
+	h3{
+		color:$color-end;
+		font-size:20px;
+		margin:10px 0 5px;
+		padding:0px 5px;
+		@include text-shadow(2px 2px 2px #362719);
+	}
+}
+.carousel-control{
+	bottom:10px;
+}
+.carousel-controlers{
+	position:relative;
+	margin-top:2em;
+	.glyphicon{
+		background-color:$color_end;
+		padding:3px;
+	}
+}
+.carousel-control.right, .carousel-control.left{
+	background-image:none;
+}
+.carousel-control.left{
+	top:1px;
+	left:38%;
+}
+.carousel-control.right{
+	right:38%;
+}
+#news-carousel{
+	.btn-foot2{
+		margin-left:3px;
+	}
+}
+#video-carousel, #news-carousel {
+	.col-md-4, .col-sm-4, .col-xs-12{
+		padding-top:1em;
+	}
+}
+#main-carousel{
+	margin:10px auto;
+	.item{
+		img{
+			width:100%;
+		}
+		div{
+			display:inline;
+			z-index:2;
+			position:absolute;
+			left:2%;
+			bottom:10%;
+			color:darken($bg-color, 35%);
+			font-size:20px;
+			text-transform:capitalize;
+			p{
+				display:block;
+				margin:7px 0;
+				span{
+					background-color:rgba(255,153,0, 0.9);
+					padding:5px;
+					@include text-shadow(1px 1px 1px $tranparent05);
+				}
+			}
+		}
+	}
+	.owl-theme .owl-controls{
+		position:absolute;
+		bottom:50%;
+		margin-bottom:-35px;
+		right:2px;
+		.owl-page{
+			display:block;
+			span{
+				@include border-radius(0%);
+				background-color:$color_end;
+				border:3px double transparent;
+				width:15px;
+				height:15px;
+				opacity:1;
+			}
+			&.active, &:hover, &:focus{
+				span{
+					background-color:$color_end;
+					border:3px double $bg-color;
+				}
+			}
+
+		}
+	}
+}

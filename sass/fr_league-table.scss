@@ -1,0 +1,80 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+#league-table{
+	h1{
+		width:50%;
+		float:left;
+	}
+	table{
+		tbody{
+			tr{
+				&:hover, &:focus{
+					background-color:$dark-grey;
+				}
+			}
+		}
+		td, th{
+			padding-left:8px;
+			padding-right:8px;
+		}
+		th{
+			white-space:nowrap;
+		}
+	}
+	.last-5-games-key{
+		list-style-type:none;
+		display: inline-block;
+		text-align:right;
+		width:50%;
+		li{
+			display: inline-block;
+			color:$foot-white;
+			vertical-align:top;
+			line-height:30px;
+
+			&:nth-child(odd){
+				width:auto;
+				height:20px;
+				margin:0px 5px;
+			}
+			&:nth-child(even){
+				width:12px;
+				height:16px;
+				margin-top:5px;
+			}
+			&.key-won{
+				background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -34px;
+			}
+			&.key-drawn{
+				background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -14px;
+			}
+			&.key-lost{
+				background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 4px;
+			}
+		}
+	}
+	.last-5-games{
+		ol{
+			list-style-type:none;
+			padding:0;
+			margin:0;
+			white-space:nowrap;
+			li{
+				display:inline-block;
+				width:12px;
+				height:12px;
+				vertical-align:middle;
+				&.win{
+					background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -38px;	
+				}
+				&.drawn{
+					background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -18px;	
+				}
+				&.lost{
+					background:url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 0px;	
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+/*colors used*/
+.left-side table {
+  border: 1px solid #ff9900;
+}
+.left-side table thead {
+  background-color: #ff9900;
+  color: #424242;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+}
+
+.table.matchs {
+  overflow-x: auto;
+}
+.table.matchs span {
+  display: inline-block;
+  vertical-align: top;
+}
+.table.matchs span.c-team1, .table.matchs span.c-team2 {
+  width: 32%;
+}
+.table.matchs span.c-versus {
+  width: 10%;
+  text-align: center;
+}
+.table.matchs span.c-date {
+  width: 20%;
+}
+.table.matchs img {
+  width: 100%;
+}

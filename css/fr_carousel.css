@@ -1,0 +1,128 @@
+/*colors used*/
+.carousel {
+  padding-bottom: 30px;
+}
+.carousel .item a {
+  display: block;
+  position: relative;
+}
+.carousel .item a img {
+  width: 100%;
+}
+.carousel .item a .glyphicon-play {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  display: block;
+  background-color: #ff9900;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.carousel .item a:hover .glyphicon-play {
+  color: #636363;
+}
+.carousel .item p {
+  color: #e1e1e1;
+  padding: 10px 5px;
+  font-size: 12px;
+}
+.carousel h3 {
+  color: #ff9900;
+  font-size: 20px;
+  margin: 10px 0 5px;
+  padding: 0px 5px;
+  -webkit-text-shadow: 2px 2px 2px #362719;
+  -moz-text-shadow: 2px 2px 2px #362719;
+  text-shadow: 2px 2px 2px #362719;
+}
+
+.carousel-control {
+  bottom: 10px;
+}
+
+.carousel-controlers {
+  position: relative;
+  margin-top: 2em;
+}
+.carousel-controlers .glyphicon {
+  background-color: #ff9900;
+  padding: 3px;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+.carousel-control.left {
+  top: 1px;
+  left: 38%;
+}
+
+.carousel-control.right {
+  right: 38%;
+}
+
+#news-carousel .btn-foot2 {
+  margin-left: 3px;
+}
+
+#video-carousel .col-md-4, #video-carousel .col-sm-4, #video-carousel .col-xs-12, #news-carousel .col-md-4, #news-carousel .col-sm-4, #news-carousel .col-xs-12 {
+  padding-top: 1em;
+}
+
+#main-carousel {
+  margin: 10px auto;
+}
+#main-carousel .item img {
+  width: 100%;
+}
+#main-carousel .item div {
+  display: inline;
+  z-index: 2;
+  position: absolute;
+  left: 2%;
+  bottom: 10%;
+  color: #636363;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+#main-carousel .item div p {
+  display: block;
+  margin: 7px 0;
+}
+#main-carousel .item div p span {
+  background-color: rgba(255, 153, 0, 0.9);
+  padding: 5px;
+  -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main-carousel .owl-theme .owl-controls {
+  position: absolute;
+  bottom: 50%;
+  margin-bottom: -35px;
+  right: 2px;
+}
+#main-carousel .owl-theme .owl-controls .owl-page {
+  display: block;
+}
+#main-carousel .owl-theme .owl-controls .owl-page span {
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -o-border-radius: 0%;
+  -ms-border-radius: 0%;
+  border-radius: 0%;
+  background-color: #ff9900;
+  border: 3px double transparent;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+}
+#main-carousel .owl-theme .owl-controls .owl-page.active span, #main-carousel .owl-theme .owl-controls .owl-page:hover span, #main-carousel .owl-theme .owl-controls .owl-page:focus span {
+  background-color: #ff9900;
+  border: 3px double #bcbcbc;
+}

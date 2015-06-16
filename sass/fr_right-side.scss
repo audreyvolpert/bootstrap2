@@ -1,0 +1,126 @@
+
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+
+.right-side.col-md-4{
+	> img{
+		margin:18px 0px 10px;
+	}
+	table{
+		border:1px solid $color_start;
+		thead{
+			background-color:$color_start;
+			color:$foot-grey;
+			@include text-shadow(none);
+		}
+	}
+	.nav-tabs{
+		margin:10px 0px 0px;
+		border-bottom:1px solid $foot-white;
+		li{
+			a{	
+				background-color:$foot-white;
+				border:0 none;
+				margin:0 0 1px 0;
+				color:$foot-grey;
+				outline: 0 none;
+				@include text-shadow(0px 0px 0px $tranparent05);
+				@include border-radius(0px);
+				font-weight:bold;
+				border-right:1px solid $border;
+				&:hover, &:focus{
+					background-color:$color-start;
+					color:$foot-white;
+				}
+			}
+			&.active{
+				a{
+					background-color:$color-start;
+					color:$foot-white;
+					border:0 none;
+				}
+			}
+		}
+	}
+	.tab-content{
+		height:304px;
+		padding:0 0 10px 0px;
+		overflow-y:auto;
+		margin-bottom:20px;
+		@include box-shadow(0 3px 2px 1px $tranparent05);
+		.tab-row{
+			border-bottom:1px solid $color_start;
+			color:$foot-white;
+			text-align:left;
+			padding-left:10px;
+			.comment-name{
+				color:$color-start;
+				font-style:italic;
+				padding-top:10px;
+				margin:0;
+			}
+		}
+		.results-row{
+			border-bottom:0.5px dotted darken($bg_color,20%);
+			color:$foot-white;
+			padding:5px 0px;
+			>span{
+				display:inline-block;
+				@include text-shadow(1px 2px 1px $tranparent05);
+				vertical-align:top;
+				&.team1{
+					text-align:right;
+					width:40%;
+				}
+				&.team2{
+					text-align:left;
+					width:40%;
+				}
+				&.score{
+					text-align:center;
+					width:10%;
+				}
+			}
+		}
+	}
+	> img{
+		width:100%;
+	}
+}
+.row.league-table{
+	> div{
+		background-color:$color-start;
+		border-bottom:1px solid $foot-grey;
+	}
+	p{
+		padding:5px 0;
+		margin:0;
+		@include text-shadow(none);
+		font-weight:bold;
+		color:$foot-grey;
+	}
+	select{
+		color:$foot-grey;
+		margin-left:30px;
+	}
+	.table{
+		td{
+			span{
+				width:10px;
+				&.no-movement{
+					background:url(images/foot_fr/body/neutral.png) no-repeat 0 0;
+					margin-left:10px;
+				}
+				&.move-down{
+					background:url(images/foot_fr/body/down.png) no-repeat 0 0;
+					margin-left:10px;
+				}
+				&.move-up{
+					background:url(images/foot_fr/body/up.png) no-repeat 0 0;
+					margin-left:10px;
+				}
+			}
+		}
+	}
+}

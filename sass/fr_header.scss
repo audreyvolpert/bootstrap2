@@ -1,0 +1,106 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+
+h1, h2, h3, h4, h5, .row{
+	margin:0px;
+}
+.navbar{
+	margin-bottom:0px;
+}
+.foot-fr{
+	.row.header{
+		position:relative;
+		background-color:transparent;
+	}
+	.row.header h1{
+		padding-left:70px;
+		height:70px;
+		line-height:90px;
+		color:$foot-white;
+		font-size:2.5vw;
+		background:url(images/foot_fr/logo.png) no-repeat 2% 0%;
+		margin:10px 0px;
+	}
+	.social-media{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	.navbar.navbar-foot{
+		background-color:$foot-grey;
+		border:0 none;
+		@include border-radius(0px);
+    	margin-bottom: 10px;
+    	@include box-shadow (0px -1px 0px $shadow1, 0px 1px 0px $shadow1);
+
+		.navbar-right{
+			margin-right:0px;
+		}
+		li{
+			a{
+				color:$foot-white;
+				&:hover, &.focus{
+					color:$foot-grey;
+					background-color:$color-start;
+				}
+			}
+			&.active{
+				a{
+					color:$foot-grey;
+				}
+				> a{
+				background-color:$color-start;
+				}
+			}
+		}
+		.nav {
+			.open{
+				a{
+					background-color:$color-start;
+				}
+			}
+			.dropdown{
+				li{
+					a{
+						background-color:$foot-white;
+						color:$foot-grey;
+						&:hover, &:focus{
+							background-color:$color-start;
+							color:$foot-white;
+						}
+					}
+				}
+			}
+		}
+		.navbar-toggle{
+			border-color:$color-start;
+			.icon-bar{
+				background-color:$color-start;
+			}
+		}
+	}
+}
+@media screen and (max-width: $screen-sm-min) {
+  li.divider{
+  	display:none;
+  }
+  .dropdown-menu{
+  	padding:0;
+  }
+  .navbar-nav .open .dropdown-menu{
+  	border-top:1px solid $foot-grey;
+  	border-bottom:1px solid #8e4b0b;
+  	@include border-radius(0px);
+	}
+  .foot-fr .navbar.navbar-foot .nav .open > a{
+  	border-bottom:1px solid #b7814e;
+  }
+  .navbar-collapse{
+  	@include box-shadow(0px 0px 0px  transparent);
+  }
+  .navbar-form{
+  	border:0 none;
+  	@include box-shadow(0px 0px 0px  transparent);
+  }
+}

@@ -1,0 +1,33 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+.left-side{
+	table{
+		border:1px solid $color_end;
+		thead{
+			background-color:$color_end;
+			color:$foot-grey;
+			@include text-shadow(none);
+		}
+	}
+}
+.table.matchs{
+	overflow-x:auto;
+	span{
+		display:inline-block;
+		vertical-align:top;
+		&.c-team1, &.c-team2{
+			width:32%;
+		}
+		&.c-versus{
+			width:10%;
+			text-align:center;
+		}
+		&.c-date{
+			width:20%;
+		}
+	}
+	img{
+		width:100%;
+	}
+}

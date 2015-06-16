@@ -1,0 +1,118 @@
+/*colors used*/
+#news {
+  color: #fff;
+}
+
+.media {
+  border: 1px solid #ff9900;
+  padding: 5px;
+}
+.media .btn-info {
+  padding: 2px 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.media .new-date {
+  font-size: 11px;
+  color: #d9d9d9;
+}
+.media .media-heading {
+  width: 90%;
+}
+.media .media-body {
+  position: relative;
+  padding-top: 5px;
+}
+.media .media-body > div p {
+  margin-top: 5px;
+}
+.media .media-body .comments {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-top: 20px;
+  color: #d9d9d9;
+  text-decoration: none;
+  background: url(images/foot_fr/body/social-media/social-media-sprite.png) no-repeat 0 -90px;
+}
+
+#add-news.tab-content {
+  overflow: hidden;
+  height: 320px;
+}
+#add-news.tab-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 8px;
+}
+#add-news.tab-content ul li a {
+  color: white;
+  -webkit-text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+  display: block;
+}
+#add-news.tab-content ul li a span {
+  margin-right: 10px;
+}
+#add-news.tab-content ul li a:hover {
+  color: #3299bb;
+}
+
+.news-page p {
+  margin: 15px 10px;
+  text-align: justify;
+}
+.news-page .news-caption {
+  margin: 15px 0;
+  color: #ff9900;
+  font-size: 120%;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+}
+.news-page a {
+  color: #ffb84d;
+  padding: 3px;
+  border-bottom: 1px solid;
+}
+.news-page a:hover, .news-page a:focus {
+  text-decoration: none;
+  border-bottom: none;
+}
+.news-page .related-news {
+  margin-bottom: 15px;
+}
+.news-page ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.news-page ul li {
+  margin-bottom: 7px;
+}
+.news-page ul li a {
+  border-bottom: 0 none;
+}
+.news-page ul li a:last-of-type {
+  text-transform: uppercase;
+  color: #3299bb;
+}
+.news-page ul li a:hover, .news-page ul li a:focus {
+  font-weight: bold;
+}
+
+.share-social span {
+  display: inline-block;
+  vertical-align: top;
+}
+.share-social a {
+  border: 0 none;
+  text-decoration: none;
+}

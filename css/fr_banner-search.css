@@ -1,0 +1,50 @@
+/*colors used*/
+.banner {
+  text-align: center;
+  padding: 15px 0;
+}
+.banner img {
+  width: 100%;
+}
+
+.search .form-group {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ff9900;
+  padding: 5px 0;
+}
+.search .form-group label {
+  float: left;
+  text-align: left;
+  font-weight: normal;
+  margin: 0;
+}
+.search .form-group label span {
+  width: 100px;
+  display: inline-block;
+}
+.search .form-group select, .search .form-group input {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.search .form-group select {
+  min-width: 155px;
+  margin: 3px 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .search .col-xs-12 .btn-foot3 {
+    margin-top: 1%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .search .col-sm-2 .btn-foot3 {
+    margin-top: 23%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .search .col-lg-2 .btn-foot3, .search .col-md-2 .btn-foot3 {
+    margin-top: 1%;
+  }
+}

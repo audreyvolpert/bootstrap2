@@ -1,0 +1,123 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+
+#news{
+	color:#fff;
+}
+.media{
+	border:1px solid $color_end;
+	padding:5px;
+	.btn-info{
+		padding:2px 12px;
+		@include border-radius(2px);
+	}
+	.new-date{
+		font-size:11px;
+		color:$color-grey;
+	}
+	.media-heading{
+		width:90%;
+	}
+	.media-body{
+		position:relative;
+		padding-top:5px;
+		> div{
+			p{
+				margin-top:5px;
+			}
+		}
+		.comments{
+			position:absolute;
+			top:10px;
+			right:10px;
+			padding-top:20px;
+			color:$color-grey;
+			text-decoration:none;
+			background:url(images/foot_fr/body/social-media/social-media-sprite.png) no-repeat 0 -90px;
+		}
+	}
+}
+#add-news.tab-content{
+	overflow:hidden;
+	height:320px;
+	
+	ul{
+		list-style-type:none;
+		margin:0;
+		padding:10px 8px;
+
+		li{
+			a{
+				color:$foot-white;
+				@include text-shadow(1px 2px 1px $tranparent05);
+				text-overflow: ellipsis;			
+				overflow:hidden;
+				white-space:nowrap;
+				width:95%;
+				display:block;
+				span{
+					margin-right:10px;
+				}
+				&:hover{
+					color:$color_start;
+				}
+			}
+		}
+	}
+}
+.news-page{
+	p{
+		margin:15px 10px;
+		text-align:justify;
+	}
+	.news-caption{
+		margin:15px 0;
+		color:$color-end;
+		font-size:120%;
+		font-weight:bold;
+	    font-style: italic;
+	    text-align: justify;
+	}
+	a{
+		color:lighten($color-end,15%);
+		padding:3px;
+		border-bottom:1px solid;
+	
+		&:hover, &:focus{
+			text-decoration:none;
+			border-bottom:none;
+			//@include text-shadow(none);
+		}
+	}
+	.related-news{
+		margin-bottom:15px;
+	}
+	ul{
+		list-style-type:none;
+		padding-left:10px;
+		li{
+			margin-bottom:7px;
+			a{
+				border-bottom:0 none;
+				&:last-of-type{
+					text-transform:uppercase;
+					color:$color_start;
+				}
+				&:hover, &:focus{
+					font-weight:bold;
+				}
+			}
+		}
+	}
+}
+.share-social{
+	span{
+		display:inline-block;
+		vertical-align:top;
+	}
+	a{
+		border:0 none;
+		text-decoration:none;
+	}
+}

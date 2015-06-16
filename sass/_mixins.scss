@@ -1,0 +1,214 @@
+@mixin box-sizing{
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box;    
+	        box-sizing: border-box; 
+}
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	   -moz-border-radius:$radius;
+	    -o-border-radius:$radius;
+	    -ms-border-radius:$radius;
+	        border-radius:$radius;
+}
+@mixin border-radius2($radius1, $radius2){
+	-webkit-border-radius:$radius1 / $radius2;
+	   -moz-border-radius:$radius1 / $radius2;
+	    -o-border-radius:$radius1 / $radius2;
+	    -ms-border-radius:$radius1 / $radius2;
+	        border-radius:$radius1 / $radius2;
+}
+// example for including this mixin ----------------- @include border-radius2(#{100px}, 20px); ------------------------------
+
+@mixin border-radius-top-left($radius){
+	-webkit-border-top-left-radius:$radius;
+	    -moz-border-radius-topleft:$radius;
+	    -ms-border-top-left-radius:$radius;
+	     -o-border-top-left-radius:$radius;
+	        border-top-left-radius:$radius;
+}
+@mixin border-radius-top-right($radius){
+	-webkit-border-top-right-radius:$radius;
+	    -moz-border-radius-topright:$radius;
+	    -ms-border-top-right-radius:$radius;
+	     -o-border-top-right-radius:$radius;
+	        border-top-right-radius:$radius;
+}
+@mixin border-radius-bottom-left($radius){
+	-webkit-border-bottom-left-radius:$radius;
+	    -moz-border-radius-bottomleft:$radius;
+	    -ms-border-bottom-left-radius:$radius;
+	     -o-border-bottom-left-radius:$radius;
+	        border-bottom-left-radius:$radius;
+}
+@mixin border-radius-bottom-right($radius){
+	-webkit-border-bottom-right-radius:$radius;
+	    -moz-border-radius-bottomright:$radius;
+	    -ms-border-bottom-right-radius:$radius;
+	     -o-border-bottom-right-radius:$radius;
+	        border-bottom-right-radius:$radius;
+}
+
+@mixin top-linear-gradient($fromColor, $toColor) {
+	background-color: $fromColor;  /*Fallback Color*/
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor}', EndColorStr='#{$toColor}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor}', endColorstr='#{$toColor}'); 
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); // Saf4+, Chrome
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); // Chrome 10+, Saf5.1+, iOS 5+
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); // FF3.6 
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); // IE10
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor); // Opera 11.10+
+	background-image:         linear-gradient(top, $fromColor, $toColor);
+}
+
+@mixin right-linear-gradient($fromColor1, $nr1, $fromColor2, $nr2) {
+	background-color: $fromColor1;  //Fallback Color
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background-image: -webkit-gradient(linear, left top, right top, color-stop($nr1, $fromColor1), color-stop($nr2, $fromColor2));//Webkit (Safari/Chrome 10)
+	background-image: -webkit-linear-gradient(left, $fromColor1 $nr1, $fromColor2 $nr2);// Webkit (Chrome 11+) 
+	background-image:    -moz-linear-gradient(left, $fromColor1 $nr1, $fromColor2 $nr2); // Mozilla Firefox
+	background-image:     -ms-linear-gradient(left, $fromColor1 $nr1, $fromColor2 $nr2); //IE10 Consumer Preview
+	background-image:      -o-linear-gradient(left, $fromColor1 $nr1, $fromColor2 $nr2); // Opera
+	background-image:         linear-gradient(to right, $fromColor1 $nr1, $fromColor2 $nr2);// W3C Markup, IE10 Release Preview
+}
+
+@mixin top-3linear-gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3) {
+	background-color: $fromColor1;  //Fallback Color 
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background: -webkit-gradient(linear,left top,left bottom,color-stop($nr1, $fromColor1),color-stop($nr2, $fromColor2),color-stop($nr3, $fromColor3));
+	background: -webkit-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:    -moz-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:     -ms-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:      -o-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:        linear-gradient(to bottom,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+}
+@mixin top-4linear-gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3, $fromColor4, $nr4) {
+	background-color: $fromColor1;  //Fallback Color 
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background: -webkit-gradient(linear,left top,left bottom,color-stop($nr1, $fromColor1),color-stop($nr2, $fromColor2),color-stop($nr3, $fromColor3),color-stop($nr4, $fromColor4));
+	background: -webkit-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+	background:    -moz-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+	background:     -ms-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+	background:      -o-linear-gradient(top,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+	background:        linear-gradient(to bottom,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+}
+@mixin to-right-3linear-gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3) {
+	background-color: $fromColor1;  //Fallback Color
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background: -webkit-gradient(linear,left top,right top,color-stop($nr1, $fromColor1),color-stop($nr2, $fromColor2),color-stop($nr3, $fromColor3));
+	background: -webkit-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:    -moz-linear-gradient(right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:     -ms-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:      -o-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+	background:         linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+}
+@mixin to-right-4linear-gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3, $fromColor4, $nr4) {
+	background-color: $fromColor1;  //Fallback Color
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background: -webkit-gradient(linear,left top,right top,color-stop($nr1, $fromColor1),color-stop($nr2, $fromColor2),color-stop($nr3, $fromColor3),color-stop($nr4, $fromColor4));
+	background: -webkit-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4, $nr4);
+	background:    -moz-linear-gradient(right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4);
+	background:     -ms-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4);
+	background:      -o-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4);
+	background:         linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4);
+}
+@mixin to-right-5linear-gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3, $fromColor4, $nr4, $fromColor5, $nr5) {
+	background-color: $fromColor1;  //Fallback Color
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor1}', EndColorStr='#{$fromColor2}');  //IE6–IE9
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromColor1}', endColorstr='#{$fromColor2}'); //Add this two lines in scss
+	background: -webkit-gradient(linear,left top,right top,color-stop($nr1, $fromColor1),color-stop($nr2, $fromColor2),color-stop($nr3, $fromColor3),color-stop($nr4, $fromColor4),color-stop($nr5, $fromColor5));
+	background: -webkit-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4, $fromColor5 $nr5);
+	background:    -moz-linear-gradient(right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4, $fromColor5 $nr5);
+	background:     -ms-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4, $fromColor5 $nr5);
+	background:      -o-linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4, $fromColor5 $nr5);
+	background:         linear-gradient(to right,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3, $fromColor4 $nr4, $fromColor5 $nr5);
+}
+@mixin to-right-linear-gradient($fromColor, $toColor) {
+	background-color: $toColor; /* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, right bottom, from($fromColor), to($toColor)); //Saf4+, Chrome
+	background-image: -webkit-linear-gradient(to right, $fromColor, $toColor); // Chrome 10+, Saf5.1+, iOS 5+
+	background-image:    -moz-linear-gradient(to right, $fromColor, $toColor); // FF3.6
+	background-image:     -ms-linear-gradient(to right, $fromColor, $toColor); // IE10
+	background-image:      -o-linear-gradient(to right, $fromColor, $toColor); // Opera 11.10+
+	background-image:         linear-gradient(to right, $fromColor, $toColor);
+}
+@mixin radial-4gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3, $fromColor4, $nr4) {
+background: $fromColor1;
+background: -moz-radial-gradient(center, ellipse cover, $fromColor1 $nr1, $fromColor2 $nr2, $fromColor3 $nr3, $fromColor4 $nr4);
+background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop($nr1,$fromColor1), color-stop($nr2,$fromColor2), color-stop($nr3,$fromColor3), color-stop($nr4,$fromColor4));
+background: -webkit-radial-gradient(center, ellipse cover,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4);
+background: -o-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4); 
+background: -ms-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4); 
+background: radial-gradient(ellipse at center, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3,$fromColor4 $nr4); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor1', endColorstr='$fromColor4',GradientType=1 ); 
+}
+@mixin radial-3gradient($fromColor1, $nr1, $fromColor2, $nr2, $fromColor3, $nr3) {
+background: $fromColor1;
+background: -moz-radial-gradient(center, ellipse cover, $fromColor1 $nr1, $fromColor2 $nr2, $fromColor3 $nr3);
+background: -webkit-gradient(radial, center center, 0%, center center, 100%, color-stop($nr1,$fromColor1), color-stop($nr2,$fromColor2), color-stop($nr3,$fromColor3));
+background: -webkit-radial-gradient(center, ellipse cover,$fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3);
+background: -o-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3); 
+background: -ms-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3); 
+background: radial-gradient(ellipse at center, $fromColor1 $nr1,$fromColor2 $nr2,$fromColor3 $nr3); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor1', endColorstr='$fromColor3',GradientType=1 ); 
+}
+@mixin radial-2gradient($fromColor1, $nr1, $fromColor2, $nr2) {
+background: $fromColor1;
+background: -moz-radial-gradient(center, ellipse cover, $fromColor1 $nr1, $fromColor2 $nr2);
+background: -webkit-gradient(radial, center center, 0%, center center, 100%, color-stop($nr1,$fromColor1), color-stop($nr2,$fromColor2));
+background: -webkit-radial-gradient(center, ellipse cover,$fromColor1 $nr1,$fromColor2 $nr2);
+background: -o-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2); 
+background: -ms-radial-gradient(center, ellipse cover, $fromColor1 $nr1,$fromColor2 $nr2); 
+background: radial-gradient(ellipse at center, $fromColor1 $nr1,$fromColor2 $nr2); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor1', endColorstr='$fromColor2',GradientType=1 ); 
+}
+@mixin box-shadow($shadows...) {
+	-webkit-box-shadow:$shadows;
+	   -moz-box-shadow:$shadows;
+	        box-shadow:$shadows;
+}
+@mixin text-shadow($shadows...) {
+	-webkit-text-shadow:$shadows;
+	   -moz-text-shadow:$shadows;
+	        text-shadow:$shadows;
+}
+@mixin transition($transitions...){
+	-webkit-transition:$transitions;
+	-moz-transition:$transitions;
+	-o-transition:$transitions;
+	-ms-transition:$transitions;
+	transition:$transitions;
+}
+@mixin rotate($degrees) {
+	-webkit-transform: rotate(#{$degrees}deg);
+	-moz-transform: rotate(#{$degrees}deg);
+	-ms-transform: rotate(#{$degrees}deg);
+	-o-transform: rotate(#{$degrees}deg);
+	transform: rotate(#{$degrees}deg);
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+	// how to use it in scss @include rotate( 24 );
+}
+@mixin translate($x,$y) {
+	-webkit-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -o-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);
+}
+@mixin rotate-translate($degrees,$x,$y) {
+	-webkit-transform: rotate(#{$degrees}deg) translate($x,$y);
+	-moz-transform: rotate(#{$degrees}deg) translate($x,$y);
+	-ms-transform: rotate(#{$degrees}deg) translate($x,$y);
+	-o-transform: rotate(#{$degrees}deg) translate($x,$y);
+	transform: rotate(#{$degrees}deg) translate($x,$y);
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+	// how to use it in scss @include rotate( 24 );
+}

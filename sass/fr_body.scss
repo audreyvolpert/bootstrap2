@@ -1,0 +1,293 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+html{
+	width:100%;
+}
+body{
+	height:100%;
+	width:100%;
+	color:$foot-white;
+	background-color:$bg-color;
+}
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th{
+	border:0 none;
+}
+.form-control{
+	@include border-radius(0px);
+}
+p, h3, h4{
+	@include text-shadow(1px 2px 1px $tranparent05);
+}
+.main{
+	@include box-shadow(6px 4px 4px $tranparent05, -6px 4px 4px $tranparent05);
+}
+.main-banner{
+	img{
+		width:100%;
+		@include box-shadow(-3px 4px 4px 1px $tranparent05);
+		margin:0px 0px 20px;
+	}
+}
+img{
+	.shadow-img{
+		@include box-shadow(-3px 4px 4px 1px rgba(0, 0, 0, 0.5));
+	}
+}
+table{
+	font-size:12px;
+}
+.info-overlay{
+	width:100%;
+	padding:0px 10px;
+	height:40px;
+	line-height:40px;
+	position:relative;
+	background-color:$tranparent05;
+	text-transform:uppercase;
+	color:$foot-white;
+	font-size:1.5em;
+	margin:-60px 0px 20px;
+}
+.foot-fr .row{
+	background-color:$foot-grey;
+}
+.subrow .col-md-4{
+	img{
+		@include box-shadow(0px 1px 4px 1px $tranparent04);
+		width:100%;
+	}
+}
+.row{
+	&.heading{
+		margin-top:10px;
+		background-color:#222;
+		h1{
+			font-size:15px;
+			font-weight:200;
+			text-transform:uppercase;
+			color:$text-color-greyish;
+			width:100%;
+			height:30px;
+			line-height:30px;
+			@include text-shadow(1px 2px 1px $tranparent05);
+		}
+	}
+	&.subheading{
+		background-color:#454545;
+		color:$text-color-greyish;
+		p{
+			font-size:13px;
+			margin:0;
+			padding:3px 0;
+		}
+	}
+	&.comments{
+		color:$text-color-greyish;
+		border:1px dotted darken($color_end, 10%);
+		border-top:0 none;
+		padding-top:10px;
+		background-color:lighten($color_end, 12%);
+		opacity:0.7;
+		color:darken($bg_color,40%);
+		p{
+			@include text-shadow(none);
+
+			&.user-name{
+				text-transform:uppercase;
+				margin:0px 2px 0px 8px;
+			}
+			&.comment-date{
+				font-style:italic;
+				font-size:12px;
+				margin:0px 0px 10px 8px;
+			}
+			&.comment-title{
+				font-weight:bold;
+				font-size:18px;
+				text-transform:uppercase;
+				padding-bottom:3px;
+				margin:0px 0px 10px 8px;
+				border-bottom:1px solid darken($color_end, 10%);
+			}
+			&.comment-content{
+				text-align:justify;
+			}
+		}
+
+		&:hover, &:focus{
+			opacity:2;
+		}
+		.subrow{
+			padding:10px 0;
+			float:left;
+		}
+	}
+}
+
+tr.divider{
+	td{
+		border:0 none;
+	}
+	hr{
+		border:0 none;
+		border-bottom:1px dotted $color_end;
+	}
+}
+.row{
+	a{
+		&.dashed{
+			border:1px solid $color_end;
+			text-decoration:none;
+			> span{
+				position:relative;
+				display: block;
+			}
+		}
+	}
+}
+
+
+.tab-over{
+	overflow-x:auto;
+}
+.row .table{
+	color:$text-color-greyish;
+	@include text-shadow(1px 2px 1px $tranparent05);
+
+	tbody{
+		td{
+			border-top-color:$border-td;
+			padding:4px 5px;
+			vertical-align:middle;
+			a{
+				color:$text-color-greyish;
+			}
+			span{
+				display:inline-block;
+				height:10px;
+			}
+		}
+	}
+}
+
+.btn-foot1, .btn-foot2, .btn-foot3{
+	color: $foot-white;
+	padding:0;
+	margin:0 10px 10px 0;
+	//border:3px double $bg_color;
+	@include border-radius(0px);
+	text-transform:uppercase;
+
+	&:hover, &:focus{
+		color:$color-start;
+	}
+}
+.btn-foot1{
+	background-color:$color-start;
+	border:1px solid darken($bg_color,5%);
+	span{
+		display:inline-block;
+		padding:0px 5px 3px 3px;
+		line-height:2;
+		vertical-align:middle;
+		@include text-shadow(1px 1px 1px darken($color_start, 40%));
+	}
+	.fa{
+		background-color:darken($color-start, 20%);
+		display:inline-block;
+		line-height:2;
+		top:0;
+		font-size:14px;
+		padding:4px 8px 2px;
+		border-right:1px solid darken($color-start, 25%);
+		@include text-shadow(1px 1px 1px darken($color_start, 40%));
+	}
+	&:hover{
+		span, .fa{
+			color:$foot-white;
+			@include text-shadow(0px -1px 0px darken($bg_color, 40%));			
+		}
+	}
+}
+ .btn-foot2{
+ 	background-color:$color-end;
+ 	border:1px solid darken($bg_color,5%);
+	span{
+		display:inline-block;
+		padding:1px 5px 0px 3px;
+		line-height:1.5;
+		vertical-align:middle;
+		@include text-shadow(1px 1px 1px darken($color_end, 40%));
+
+		&.glyphicon{
+			background-color:darken($color-end, 20%);
+			display:inline-block;
+			line-height:2;
+			top:0;
+			font-size:14px;
+			padding:4px 8px 2px;
+			border-right:1px solid darken($color-end, 25%);
+		}
+	}
+	&:hover{
+		span{
+			color:$foot-white;
+			@include text-shadow(0px -1px 0px darken($bg_color, 25%));			
+		}
+	}
+ }
+.btn-foot3{
+	background-color: transparent;
+	border:1px solid darken($bg_color,4%);
+    margin:0px 0px 0px 0px;
+    	span{
+		display:inline-block;
+		padding:0px 5px 3px 3px;
+		line-height:2;
+		font-weight:bold;
+		vertical-align:middle;
+		@include text-shadow(1px 1px 1px darken($color_end, 40%));
+	}
+	.fa{
+		background-color:darken($color-end, 10%);
+		display:inline-block;
+		line-height:2;
+		top:0;
+		font-size:14px;
+		padding:4px 8px 2px;
+		border-right:1px solid darken($color-end, 25%);
+		@include text-shadow(1px 1px 1px darken($color_end, 40%));
+	}
+	&:hover{
+		span, .fa{
+			color:$foot-white;
+			@include text-shadow(0px -1px 0px darken($bg_color, 40%));			
+		}
+	}
+}
+a{
+	&.tweet-icon{
+		display:inline-block;
+		width:50px;
+		height:19px;
+		background:url(images/foot_fr/body/social-media/social-media-sprite.png) no-repeat 0 -62px;
+	}
+	&.fb-share-icon{
+		display:inline-block;
+		width:46px;
+		height:19px;
+		background:url(images/foot_fr/body/social-media/social-media-sprite.png) no-repeat 0 -31.5px;
+	}
+	&.pin-icon{
+		display:inline-block;
+		width:50px;
+		height:19px;
+		background:url(images/foot_fr/body/social-media/social-media-sprite.png) no-repeat 0 0;
+	}
+}

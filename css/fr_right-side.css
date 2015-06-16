@@ -1,0 +1,125 @@
+/*colors used*/
+.right-side.col-md-4 > img {
+  margin: 18px 0px 10px;
+}
+.right-side.col-md-4 table {
+  border: 1px solid #3299bb;
+}
+.right-side.col-md-4 table thead {
+  background-color: #3299bb;
+  color: #424242;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+}
+.right-side.col-md-4 .nav-tabs {
+  margin: 10px 0px 0px;
+  border-bottom: 1px solid white;
+}
+.right-side.col-md-4 .nav-tabs li a {
+  background-color: white;
+  border: 0 none;
+  margin: 0 0 1px 0;
+  color: #424242;
+  outline: 0 none;
+  -webkit-text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  border-right: 1px solid #3299bb;
+}
+.right-side.col-md-4 .nav-tabs li a:hover, .right-side.col-md-4 .nav-tabs li a:focus {
+  background-color: #3299bb;
+  color: white;
+}
+.right-side.col-md-4 .nav-tabs li.active a {
+  background-color: #3299bb;
+  color: white;
+  border: 0 none;
+}
+.right-side.col-md-4 .tab-content {
+  height: 304px;
+  padding: 0 0 10px 0px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.right-side.col-md-4 .tab-content .tab-row {
+  border-bottom: 1px solid #3299bb;
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+}
+.right-side.col-md-4 .tab-content .tab-row .comment-name {
+  color: #3299bb;
+  font-style: italic;
+  padding-top: 10px;
+  margin: 0;
+}
+.right-side.col-md-4 .tab-content .results-row {
+  border-bottom: 0.5px dotted #898989;
+  color: white;
+  padding: 5px 0px;
+}
+.right-side.col-md-4 .tab-content .results-row > span {
+  display: inline-block;
+  -webkit-text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+  vertical-align: top;
+}
+.right-side.col-md-4 .tab-content .results-row > span.team1 {
+  text-align: right;
+  width: 40%;
+}
+.right-side.col-md-4 .tab-content .results-row > span.team2 {
+  text-align: left;
+  width: 40%;
+}
+.right-side.col-md-4 .tab-content .results-row > span.score {
+  text-align: center;
+  width: 10%;
+}
+.right-side.col-md-4 > img {
+  width: 100%;
+}
+
+.row.league-table > div {
+  background-color: #3299bb;
+  border-bottom: 1px solid #424242;
+}
+.row.league-table p {
+  padding: 5px 0;
+  margin: 0;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+  font-weight: bold;
+  color: #424242;
+}
+.row.league-table select {
+  color: #424242;
+  margin-left: 30px;
+}
+.row.league-table .table td span {
+  width: 10px;
+}
+.row.league-table .table td span.no-movement {
+  background: url(images/foot_fr/body/neutral.png) no-repeat 0 0;
+  margin-left: 10px;
+}
+.row.league-table .table td span.move-down {
+  background: url(images/foot_fr/body/down.png) no-repeat 0 0;
+  margin-left: 10px;
+}
+.row.league-table .table td span.move-up {
+  background: url(images/foot_fr/body/up.png) no-repeat 0 0;
+  margin-left: 10px;
+}

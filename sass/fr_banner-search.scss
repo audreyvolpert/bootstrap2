@@ -1,0 +1,53 @@
+@import '_variables';// variables from bootstrap
+@import '_mixins';
+@import 'fr_variables';
+
+.banner{
+	text-align:center;
+	padding:15px 0;
+	img{
+		width:100%;
+	}
+}
+.search{
+	.form-group {
+		width:100%;
+		overflow:hidden;
+		background-color:$color-end;
+		padding:5px 0;
+		label {
+		    float: left;
+		    text-align: left;
+		    font-weight: normal;
+		    margin:0;
+		    span{
+		    	width:100px;
+		    	display:inline-block;
+		    }
+		}
+		select, input {
+		    display: inline-block;
+		    width: auto;
+		    vertical-align: middle;
+		}
+		select{
+			min-width:155px;
+			margin:3px 0px;
+		}
+	}
+}
+@media screen and (max-width:767px){
+	.search .col-xs-12 .btn-foot3{
+		margin-top:1%;	
+	}
+}
+@media screen and (min-width:768px){
+	.search .col-sm-2 .btn-foot3{
+		margin-top:23%;	
+	}
+}
+@media screen and (min-width:992px){
+	.search .col-lg-2 .btn-foot3, .search .col-md-2 .btn-foot3{
+		margin-top:1%;
+	}
+}
