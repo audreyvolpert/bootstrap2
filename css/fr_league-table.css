@@ -1,0 +1,67 @@
+/*colors used*/
+#league-table h1 {
+  width: 50%;
+  float: left;
+}
+#league-table table tbody tr:hover, #league-table table tbody tr:focus {
+  background-color: #222222;
+}
+#league-table table td, #league-table table th {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#league-table table th {
+  white-space: nowrap;
+}
+#league-table .last-5-games-key {
+  list-style-type: none;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+#league-table .last-5-games-key li {
+  display: inline-block;
+  color: white;
+  vertical-align: top;
+  line-height: 30px;
+}
+#league-table .last-5-games-key li:nth-child(odd) {
+  width: auto;
+  height: 20px;
+  margin: 0px 5px;
+}
+#league-table .last-5-games-key li:nth-child(even) {
+  width: 12px;
+  height: 16px;
+  margin-top: 5px;
+}
+#league-table .last-5-games-key li.key-won {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -34px;
+}
+#league-table .last-5-games-key li.key-drawn {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -14px;
+}
+#league-table .last-5-games-key li.key-lost {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 4px;
+}
+#league-table .last-5-games ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+#league-table .last-5-games ol li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+}
+#league-table .last-5-games ol li.win {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -38px;
+}
+#league-table .last-5-games ol li.drawn {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 -18px;
+}
+#league-table .last-5-games ol li.lost {
+  background: url(images/foot_fr/body/key-points-sprite.png) no-repeat 0 0px;
+}
